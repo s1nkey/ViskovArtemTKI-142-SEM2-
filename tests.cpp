@@ -5,7 +5,7 @@
 #include "../header/Hexagon.h"
 
 /**
- * @brief Проверяет конструктор точки и методы получения координат
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ С‚РѕС‡РєРё Рё РјРµС‚РѕРґС‹ РїРѕР»СѓС‡РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚
  */
 TEST(PointTest, Constructor_And_Getters)
 {
@@ -16,7 +16,7 @@ TEST(PointTest, Constructor_And_Getters)
 }
 
 /**
- * @brief Проверяет конструктор копирования точки
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ С‚РѕС‡РєРё
  */
 TEST(PointTest, Copy_Constructor)
 {
@@ -28,7 +28,7 @@ TEST(PointTest, Copy_Constructor)
 }
 
 /**
- * @brief Проверяет оператор присваивания точки
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ С‚РѕС‡РєРё
  */
 TEST(PointTest, Assignment_Operator)
 {
@@ -42,7 +42,7 @@ TEST(PointTest, Assignment_Operator)
 }
 
 /**
- * @brief Проверяет оператор равенства точек
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕРїРµСЂР°С‚РѕСЂ СЂР°РІРµРЅСЃС‚РІР° С‚РѕС‡РµРє
  */
 TEST(PointTest, Equality_Operator)
 {
@@ -55,7 +55,7 @@ TEST(PointTest, Equality_Operator)
 }
 
 /**
- * @brief Проверяет оператор неравенства точек
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕРїРµСЂР°С‚РѕСЂ РЅРµСЂР°РІРµРЅСЃС‚РІР° С‚РѕС‡РµРє
  */
 TEST(PointTest, Inequality_Operator)
 {
@@ -68,7 +68,7 @@ TEST(PointTest, Inequality_Operator)
 }
 
 /**
- * @brief Проверяет оператор вывода точки в поток
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° С‚РѕС‡РєРё РІ РїРѕС‚РѕРє
  */
 TEST(PointTest, Output_Operator)
 {
@@ -81,7 +81,7 @@ TEST(PointTest, Output_Operator)
 }
 
 /**
- * @brief Проверяет оператор ввода точки из потока
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕРїРµСЂР°С‚РѕСЂ РІРІРѕРґР° С‚РѕС‡РєРё РёР· РїРѕС‚РѕРєР°
  */
 TEST(PointTest, Input_Operator)
 {
@@ -95,7 +95,7 @@ TEST(PointTest, Input_Operator)
 }
 
 /**
- * @brief Проверяет обработку некорректного ввода точки
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕР±СЂР°Р±РѕС‚РєСѓ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РІРІРѕРґР° С‚РѕС‡РєРё
  */
 TEST(PointTest, Input_Operator_Invalid_Data)
 {
@@ -106,7 +106,7 @@ TEST(PointTest, Input_Operator_Invalid_Data)
 }
 
 /**
- * @brief Проверяет вычисление длины вектора
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РІС‹С‡РёСЃР»РµРЅРёРµ РґР»РёРЅС‹ РІРµРєС‚РѕСЂР°
  */
 TEST(VectorTest, Length)
 {
@@ -118,7 +118,7 @@ TEST(VectorTest, Length)
 }
 
 /**
- * @brief Проверяет вычисление площади и периметра правильного шестиугольника
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РІС‹С‡РёСЃР»РµРЅРёРµ РїР»РѕС‰Р°РґРё Рё РїРµСЂРёРјРµС‚СЂР° РїСЂР°РІРёР»СЊРЅРѕРіРѕ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРєР°
  */
 TEST(HexagonTest, Area_And_Perimeter)
 {
@@ -138,7 +138,7 @@ TEST(HexagonTest, Area_And_Perimeter)
 }
 
 /**
- * @brief Проверяет установку корректного значения погрешности
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ СѓСЃС‚Р°РЅРѕРІРєСѓ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РїРѕРіСЂРµС€РЅРѕСЃС‚Рё
  */
 TEST(HexagonTest, SetEps_Correct_Value)
 {
@@ -147,7 +147,7 @@ TEST(HexagonTest, SetEps_Correct_Value)
 }
 
 /**
- * @brief Проверяет обработку некорректного значения погрешности
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РѕР±СЂР°Р±РѕС‚РєСѓ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РїРѕРіСЂРµС€РЅРѕСЃС‚Рё
  */
 TEST(HexagonTest, SetEps_Incorrect_Value)
 {
@@ -157,7 +157,7 @@ TEST(HexagonTest, SetEps_Incorrect_Value)
 }
 
 /**
- * @brief Проверяет вывод информации о правильном шестиугольнике в поток
+ * @brief РџСЂРѕРІРµСЂСЏРµС‚ РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїСЂР°РІРёР»СЊРЅРѕРј С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРєРµ РІ РїРѕС‚РѕРє
  */
 TEST(HexagonTest, ToString_Output)
 {
@@ -177,8 +177,8 @@ TEST(HexagonTest, ToString_Output)
 
 	std::string result = os.str();
 
-	EXPECT_NE(result.find("Фигура: Правильный-Шестиугольник"), std::string::npos);
-	EXPECT_NE(result.find("Точка A"), std::string::npos);
-	EXPECT_NE(result.find("Точка F"), std::string::npos);
-	EXPECT_NE(result.find("Длинна между точками"), std::string::npos);
+	EXPECT_NE(result.find("Р¤РёРіСѓСЂР°: РџСЂР°РІРёР»СЊРЅС‹Р№-РЁРµСЃС‚РёСѓРіРѕР»СЊРЅРёРє"), std::string::npos);
+	EXPECT_NE(result.find("РўРѕС‡РєР° A"), std::string::npos);
+	EXPECT_NE(result.find("РўРѕС‡РєР° F"), std::string::npos);
+	EXPECT_NE(result.find("Р”Р»РёРЅРЅР° РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё"), std::string::npos);
 }
