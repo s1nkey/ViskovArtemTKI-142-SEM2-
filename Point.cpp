@@ -58,7 +58,7 @@ std::istream& operator >> (std::istream& is, Point& point)
 	is >> x >> y;
 	if (is.fail())
 	{
-		point.error("Ошибка ввода");
+		point.error("РћС€РёР±РєР° РІРІРѕРґР°");
 	}
 	point.x = x;
 	point.y = y;
