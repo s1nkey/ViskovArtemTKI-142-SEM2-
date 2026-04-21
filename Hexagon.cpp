@@ -114,11 +114,11 @@ void Hexagon::ToString(std::ostream& os)
     Vector one(A, B);
 
     os << "Фигура: Правильный-Шестиугольник" << std::endl;
-    os << "Òî÷êà A (" << A.getX() << "; " << A.getY() << ")" << std::endl;
-    os << "Òî÷êà B (" << B.getX() << "; " << B.getY() << ")" << std::endl;
-    os << "Òî÷êà C (" << C.getX() << "; " << C.getY() << ")" << std::endl;
-    os << "Òî÷êà D (" << D.getX() << "; " << D.getY() << ")" << std::endl;
-    os << "Òî÷êà E (" << E.getX() << "; " << E.getY() << ")" << std::endl;
-    os << "Òî÷êà F (" << F.getX() << "; " << F.getY() << ")" << std::endl;
+    os << "Точка A (" << A.getX() << "; " << A.getY() << ")" << std::endl;
+    os << "Точка B (" << B.getX() << "; " << B.getY() << ")" << std::endl;
+    os << "Точка C (" << C.getX() << "; " << C.getY() << ")" << std::endl;
+    os << "Точка D (" << D.getX() << "; " << D.getY() << ")" << std::endl;
+    os << "Точка E (" << E.getX() << "; " << E.getY() << ")" << std::endl;
+    os << "Точка F (" << F.getX() << "; " << F.getY() << ")" << std::endl;
     os << "Длинна между точками: " << fixValue(one.getLen()) << std::endl;
 }
