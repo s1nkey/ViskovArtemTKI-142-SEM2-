@@ -2,13 +2,13 @@
 #include "../header/Point.h"
 
 /**
- * @brief Считывает допустимую погрешность и устанавливает её для класса Hexagon
+ * @brief РЎС‡РёС‚С‹РІР°РµС‚ РґРѕРїСѓСЃС‚РёРјСѓСЋ РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РµС‘ РґР»СЏ РєР»Р°СЃСЃР° Hexagon
  */
 void getEpsilon();
 
 /**
- * @brief Точка входа в программу
- * @return 0 или 1, в зависимости от корректности выполнения
+ * @brief РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ
+ * @return 0 РёР»Рё 1, РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РІС‹РїРѕР»РЅРµРЅРёСЏ
  */
 int main()
 {
@@ -18,13 +18,13 @@ int main()
 		getEpsilon();
 		std::cout << std::endl;
 
-		std::cout << "Введите 12 координат с указанной выше точностью:" << std::endl;
+		std::cout << "Р’РІРµРґРёС‚Рµ 12 РєРѕРѕСЂРґРёРЅР°С‚ СЃ СѓРєР°Р·Р°РЅРЅРѕР№ РІС‹С€Рµ С‚РѕС‡РЅРѕСЃС‚СЊСЋ:" << std::endl;
 
 		Point points[6];
-		std::string numbers[6] = { "первой", "второй", "третьей" , "четвёртой" , "пятой", "шестой" };
+		std::string numbers[6] = { "РїРµСЂРІРѕР№", "РІС‚РѕСЂРѕР№", "С‚СЂРµС‚СЊРµР№" , "С‡РµС‚РІС‘СЂС‚РѕР№" , "РїСЏС‚РѕР№", "С€РµСЃС‚РѕР№" };
 		for (size_t i = 0; i < 6; i++)
 		{
-			std::cout << " Введите координаты " << numbers[i] << " точки (x;y): ";
+			std::cout << " Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ " << numbers[i] << " С‚РѕС‡РєРё (x;y): ";
 			std::cin >> points[i];
 		}
 
@@ -32,12 +32,12 @@ int main()
 
 		Hexagon First(points[0], points[1], points[2], points[3], points[4], points[5]);
 		First.ToString(std::cout);
-		std::cout << "Площадь: " << First.getArea() << std::endl;
-		std::cout << "Периметр: " << First.getPerimetr() << std::endl;
+		std::cout << "РџР»РѕС‰Р°РґСЊ: " << First.getArea() << std::endl;
+		std::cout << "РџРµСЂРёРјРµС‚СЂ: " << First.getPerimetr() << std::endl;
 	}
 	catch (const std::exception& e)
 	{
-		std::cerr << "Ошибка: " << e.what() << std::endl;
+		std::cerr << "РћС€РёР±РєР°: " << e.what() << std::endl;
 	}
 	return 0;
 }
@@ -45,11 +45,11 @@ int main()
 void getEpsilon()
 {
 	double epsilon = 0.01;
-	std::cout << "Установите допустимую точность координат (например 0.01): ";
+	std::cout << "РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РґРѕРїСѓСЃС‚РёРјСѓСЋ С‚РѕС‡РЅРѕСЃС‚СЊ РєРѕРѕСЂРґРёРЅР°С‚ (РЅР°РїСЂРёРјРµСЂ 0.01): ";
 	std::cin >> epsilon;
 	if (std::cin.fail())
 	{
-		throw std::runtime_error("Недопустимое значение");
+		throw std::runtime_error("РќРµРґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ");
 	}
 	Hexagon::setEps(epsilon);
 }
