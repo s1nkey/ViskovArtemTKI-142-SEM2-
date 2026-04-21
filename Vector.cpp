@@ -26,7 +26,7 @@ double Vector::getAngle(Vector& other)
 
     if (len1 == 0 || len2 == 0)
     {
-        throw std::runtime_error("Невозможно вычислить угол: нулевой вектор");
+        throw std::runtime_error("РќРµРІРѕР·РјРѕР¶РЅРѕ РІС‹С‡РёСЃР»РёС‚СЊ СѓРіРѕР»: РЅСѓР»РµРІРѕР№ РІРµРєС‚РѕСЂ");
     }
 
     double cosValue = scalar / (len1 * len2);
