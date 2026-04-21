@@ -21,7 +21,7 @@ void Hexagon::thisHexagon()
         {
             if (point[i] == point[j])
             {
-                error("Фигура не образует шестиугольник: Точки совпадают");
+                error("Р¤РёРіСѓСЂР° РЅРµ РѕР±СЂР°Р·СѓРµС‚ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРє: РўРѕС‡РєРё СЃРѕРІРїР°РґР°СЋС‚");
             }
         }
     }
@@ -49,7 +49,7 @@ void Hexagon::thisHexagon()
         {
             if (std::fabs(len[i] - len[j]) > Hexagon::eps)
             {
-                error("Фигура не образует шестиугольник: Стороны не равны");
+                error("Р¤РёРіСѓСЂР° РЅРµ РѕР±СЂР°Р·СѓРµС‚ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРє: РЎС‚РѕСЂРѕРЅС‹ РЅРµ СЂР°РІРЅС‹");
             }
         }
     }
@@ -60,7 +60,7 @@ void Hexagon::thisHexagon()
         {
             if (std::fabs(angle[i] - angle[j]) > Hexagon::eps)
             {
-                error("Фигура не образует шестиугольник: Углы не равны");
+                error("Р¤РёРіСѓСЂР° РЅРµ РѕР±СЂР°Р·СѓРµС‚ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРє: РЈРіР»С‹ РЅРµ СЂР°РІРЅС‹");
             }
         }
     }
@@ -92,7 +92,7 @@ void Hexagon::setEps(double value)
 {
     if (value <= 0 || value > 1)
     {
-        throw std::runtime_error("Недопустимое значение");
+        throw std::runtime_error("РќРµРґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ");
     }
     eps = value;
 }
@@ -113,12 +113,12 @@ void Hexagon::ToString(std::ostream& os)
 {
     Vector one(A, B);
 
-    os << "Фигура: Правильный-Шестиугольник" << std::endl;
-    os << "Точка A (" << A.getX() << "; " << A.getY() << ")" << std::endl;
-    os << "Точка B (" << B.getX() << "; " << B.getY() << ")" << std::endl;
-    os << "Точка C (" << C.getX() << "; " << C.getY() << ")" << std::endl;
-    os << "Точка D (" << D.getX() << "; " << D.getY() << ")" << std::endl;
-    os << "Точка E (" << E.getX() << "; " << E.getY() << ")" << std::endl;
-    os << "Точка F (" << F.getX() << "; " << F.getY() << ")" << std::endl;
-    os << "Длинна между точками: " << fixValue(one.getLen()) << std::endl;
+    os << "Р¤РёРіСѓСЂР°: РџСЂР°РІРёР»СЊРЅС‹Р№-РЁРµСЃС‚РёСѓРіРѕР»СЊРЅРёРє" << std::endl;
+    os << "Г’Г®Г·ГЄГ  A (" << A.getX() << "; " << A.getY() << ")" << std::endl;
+    os << "Г’Г®Г·ГЄГ  B (" << B.getX() << "; " << B.getY() << ")" << std::endl;
+    os << "Г’Г®Г·ГЄГ  C (" << C.getX() << "; " << C.getY() << ")" << std::endl;
+    os << "Г’Г®Г·ГЄГ  D (" << D.getX() << "; " << D.getY() << ")" << std::endl;
+    os << "Г’Г®Г·ГЄГ  E (" << E.getX() << "; " << E.getY() << ")" << std::endl;
+    os << "Г’Г®Г·ГЄГ  F (" << F.getX() << "; " << F.getY() << ")" << std::endl;
+    os << "Р”Р»РёРЅРЅР° РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё: " << fixValue(one.getLen()) << std::endl;
 }
