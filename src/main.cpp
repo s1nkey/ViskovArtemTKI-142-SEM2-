@@ -12,7 +12,7 @@ void getEpsilon();
  */
 int main()
 {
-	setlocale(LC_ALL,"RU");
+	setlocale(LC_ALL, "RU");
 	try
 	{
 		getEpsilon();
@@ -44,7 +44,7 @@ int main()
 
 void getEpsilon()
 {
-	double epsilon = 0.01;
+	double epsilon = std::numeric_limits<double>::epsilon();
 	std::cout << "Установите допустимую точность координат (например 0.01): ";
 	std::cin >> epsilon;
 	if (std::cin.fail())
