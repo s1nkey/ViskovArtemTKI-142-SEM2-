@@ -30,6 +30,12 @@ public:
 	Point(const Point& other);
 
 	/**
+	 * @brief Конструктор перемещения
+	 * @param other - Точка, из которой перемещаются координаты
+	 */
+	Point(Point&& other) noexcept;
+
+	/**
 	 * @brief Возвращает координату точки по оси X
 	 * @return Значение координаты X
 	 */
