@@ -33,13 +33,13 @@ public:
 	 * @brief Возвращает координату точки по оси X
 	 * @return Значение координаты X
 	 */
-	double getX();
+	double getX()const;
 
 	/**
 	 * @brief Возвращает координату точки по оси Y
 	 * @return Значение координаты Y
 	 */
-	double getY();
+	double getY()const;
 
 	/**
 	 * @brief Оператор присваивания координат другой точки
