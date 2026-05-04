@@ -22,19 +22,19 @@ private:
 	 * @brief Выбрасывает исключение
 	 * @param text - Текст ошибки
 	 */
-	void error(std::string text);
+	void error(const std::string& text);
 
 	/**
 	 * @brief Проверяет, образуют ли точки правильный шестиугольник
 	 */
-	void thisHexagon();
+	void thisHexagon() const;
 
 	/**
 	 * @brief Округляет значение с учётом установленной точности
 	 * @param value - Значение для округления
 	 * @return Округлённое значение
 	 */
-	double fixValue(double value);
+	double fixValue(const double value);
 public:
 	/**
 	 * @brief Конструктор, создающий правильный шестиугольник по шести точкам
@@ -45,13 +45,13 @@ public:
 	 * @param E - Пятая точка
 	 * @param F - Шестая точка
 	 */
-	Hexagon(const Point A, const Point B, const Point C, const Point D, const Point E, const Point F);
+	Hexagon(const Point& A, const Poin&t B, const Point& C, const Point& D, const Point& E, const Point& F);
 
 	/**
 	 * @brief Устанавливает допустимую погрешность
 	 * @param value - Значение погрешности
 	 */
-	static void setEps(double value);
+	static void setEps(const double value);
 
 	/**
 	 * @brief Вычисляет площадь правильного шестиугольника
