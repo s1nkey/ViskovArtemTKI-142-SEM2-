@@ -16,18 +16,18 @@ public:
 	 * @param A - Начальная точка вектора
 	 * @param B - Конечная точка вектора
 	 */
-	Vector(const Point A, const Point B);
+	Vector(const Point& A, const Point& B);
 
 	/**
 	 * @brief Вычисляет длину вектора
 	 * @return Длина вектора
 	 */
-	double getLen();
+	double getLen() const;
 
 	/**
 	 * @brief Вычисляет угол между текущим вектором и другим вектором
 	 * @param other - Другой вектор, с которым вычисляется угол
 	 * @return Угол между векторами
 	 */
-	double getAngle(Vector& other);
+	double getAngle(const Vector& other) const;
 };
