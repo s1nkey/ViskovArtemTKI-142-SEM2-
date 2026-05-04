@@ -4,14 +4,14 @@
 #include <cmath>
 #include <stdexcept>
 
-double Hexagon::eps = 0.01;
+double Hexagon::eps = std::numeric_limits<double>::epsilon();
 
-void Hexagon::error(std::string text)
+void Hexagon::error(const std::string text)
 {
     throw std::runtime_error(text);
 }
 
-void Hexagon::thisHexagon()
+void Hexagon::thisHexagon() const
 {
     Point point[6] = { A, B, C, D, E, F };
 
@@ -66,7 +66,7 @@ void Hexagon::thisHexagon()
     }
 }
 
-double Hexagon::fixValue(double value)
+double Hexagon::fixValue(const double value)
 {
     if (std::fabs(value - std::round(value)) < 0.001)
     {
@@ -76,7 +76,7 @@ double Hexagon::fixValue(double value)
     return std::round(value * 1000.0) / 1000.0;
 }
 
-Hexagon::Hexagon(const Point A, const Point B, const Point C, const Point D, const Point E, const Point F)
+Hexagon::Hexagon(const Point& A, const Poin&t B, const Point& C, const Point& D, const Point& E, const Point& F);
 {
     this->A = A;
     this->B = B;
@@ -88,7 +88,7 @@ Hexagon::Hexagon(const Point A, const Point B, const Point C, const Point D, con
     thisHexagon();
 }
 
-void Hexagon::setEps(double value)
+void Hexagon::setEps(const double value)
 {
     if (value <= 0 || value > 1)
     {
