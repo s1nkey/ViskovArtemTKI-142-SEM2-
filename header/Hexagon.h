@@ -16,7 +16,10 @@ private:
 	/**
 	 * @param countPoint - количество точек шестиугольника
 	 */
-	enum(countPoint = 6);
+	enum C
+	{
+		countPoint = 6
+	};
 
 	/**
 	 * @brief Допустимая погрешность при проверке шестиугольника
@@ -27,7 +30,7 @@ private:
 	 * @brief Выбрасывает исключение
 	 * @param text - Текст ошибки
 	 */
-	void error(const std::string& text);
+	void error(const std::string& text) const;
 
 	/**
 	 * @brief Проверяет, образуют ли точки правильный шестиугольник
@@ -50,7 +53,7 @@ public:
 	 * @param E - Пятая точка
 	 * @param F - Шестая точка
 	 */
-	Hexagon(const Point& A, const Poin&t B, const Point& C, const Point& D, const Point& E, const Point& F);
+	Hexagon(const Point& A, const Point& B, const Point& C, const Point& D, const Point& E, const Point& F);
 
 	/**
 	 * @brief Устанавливает допустимую погрешность
