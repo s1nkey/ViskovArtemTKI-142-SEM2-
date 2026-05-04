@@ -6,7 +6,7 @@
 
 double Hexagon::eps = std::numeric_limits<double>::epsilon();
 
-void Hexagon::error(const std::string text)
+void Hexagon::error(const std::string& text) const
 {
     throw std::runtime_error(text);
 }
@@ -15,9 +15,9 @@ void Hexagon::thisHexagon() const
 {
     Point point[countPoint] = { A, B, C, D, E, F };
 
-    for (size_t i = 0; i < 6; i++)
+    for (size_t i = 0; i < countPoint; i++)
     {
-        for (size_t j = i + 1; j < 6; j++)
+        for (size_t j = i + 1; j < countPoint; j++)
         {
             if (point[i] == point[j])
             {
@@ -43,30 +43,24 @@ void Hexagon::thisHexagon() const
         four.getAngle(five), five.getAngle(six), six.getAngle(one)
     };
 
-    for (size_t i = 0; i < 6; i++)
+    for (size_t i = 1; i < countPoint; i++)
     {
-        for (size_t j = i + 1; j < 6; j++)
+        if (std::fabs(len[i] - len[0]) > Hexagon::eps)
         {
-            if (std::fabs(len[i] - len[j]) > Hexagon::eps)
-            {
-                error("Фигура не образует шестиугольник: Стороны не равны");
-            }
+            error("Фигура не образует шестиугольник: Стороны не равны");
         }
     }
 
-    for (size_t i = 0; i < 6; i++)
+    for (size_t i = 0; i < countPoint; i++)
     {
-        for (size_t j = i + 1; j < 6; j++)
+        if (std::fabs(angle[i] - 120.0) > Hexagon::eps)
         {
-            if (std::fabs(angle[i] - angle[j]) > Hexagon::eps)
-            {
-                error("Фигура не образует шестиугольник: Углы не равны");
-            }
+            error("Фигура не образует правильный шестиугольник: Угол не равен 120 градусам");
         }
     }
 }
 
-double Hexagon::fixValue(const double value)
+double Hexagon::fixValue(double value)
 {
     if (std::fabs(value - std::round(value)) < 0.001)
     {
@@ -76,7 +70,7 @@ double Hexagon::fixValue(const double value)
     return std::round(value * 1000.0) / 1000.0;
 }
 
-Hexagon::Hexagon(const Point& A, const Poin&t B, const Point& C, const Point& D, const Point& E, const Point& F);
+Hexagon::Hexagon(const Point& A, const Point& B, const Point& C, const Point& D, const Point& E, const Point& F)
 {
     this->A = A;
     this->B = B;
