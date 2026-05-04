@@ -82,6 +82,22 @@ Hexagon::Hexagon(const Point& A, const Point& B, const Point& C, const Point& D,
     thisHexagon();
 }
 
+Hexagon::Hexagon(const Hexagon& other)
+    : A(other.A), B(other.B), C(other.C), D(other.D), E(other.E), F(other.F)
+{
+    thisHexagon();
+}
+
+Hexagon::Hexagon(Hexagon&& other) noexcept
+    : A(std::move(other.A)),
+    B(std::move(other.B)),
+    C(std::move(other.C)),
+    D(std::move(other.D)),
+    E(std::move(other.E)),
+    F(std::move(other.F))
+{
+    thisHexagon();
+}
 void Hexagon::setEps(const double value)
 {
     if (value <= 0 || value > 1)
