@@ -18,6 +18,15 @@ Point::Point(const Point& other)
 	this->y = other.y;
 }
 
+Point::Point(Point&& other) noexcept
+{
+	x = other.x;
+	y = other.y;
+
+	other.x = 0;
+	other.y = 0;
+}
+
 double Point::getX() const
 {
 	return x;
