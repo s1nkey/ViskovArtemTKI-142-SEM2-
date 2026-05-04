@@ -21,8 +21,8 @@ double Vector::getAngle(const Vector& other) const
     double y2 = other.B.getY() - other.A.getY();
 
     double scalar = x1 * x2 + y1 * y2;
-    double len1 = sqrt(x1 * x1 + y1 * y1);
-    double len2 = sqrt(x2 * x2 + y2 * y2);
+    double len1 = getLen();
+    double len2 = other.getLen();
 
     if (len1 <= std::numeric_limits<double>::epsilon() || len2 <= std::numeric_limits<double>::epsilon())
     {
