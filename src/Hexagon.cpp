@@ -13,7 +13,7 @@ void Hexagon::error(const std::string text)
 
 void Hexagon::thisHexagon() const
 {
-    Point point[6] = { A, B, C, D, E, F };
+    Point point[countPoint] = { A, B, C, D, E, F };
 
     for (size_t i = 0; i < 6; i++)
     {
@@ -33,12 +33,12 @@ void Hexagon::thisHexagon() const
     Vector five(E, F);
     Vector six(F, A);
 
-    double len[6] = {
+    double len[countPoint] = {
         one.getLen(), two.getLen(), three.getLen(),
         four.getLen(), five.getLen(), six.getLen()
     };
 
-    double angle[6] = {
+    double angle[countPoint] = {
         one.getAngle(two), two.getAngle(three), three.getAngle(four),
         four.getAngle(five), five.getAngle(six), six.getAngle(one)
     };
