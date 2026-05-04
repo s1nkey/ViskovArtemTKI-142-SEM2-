@@ -18,30 +18,30 @@ Point::Point(const Point& other)
 	this->y = other.y;
 }
 
-double Point::getX()
+double Point::getX() const
 {
 	return x;
 }
 
-double Point::getY()
+double Point::getY() const
 {
 	return y;
 }
 
 void Point::operator = (const Point& other)
-{ 
+{
 	this->x = other.x;
 	this->y = other.y;
 }
 
 bool Point::operator == (const Point other) const
 {
-	return ((fabs(this->x - other.x) <= std::numeric_limits<double>::epsilon()) 
+	return ((fabs(this->x - other.x) <= std::numeric_limits<double>::epsilon())
 		&& (fabs(this->y - other.y) <= std::numeric_limits<double>::epsilon()));
 }
 
 bool Point::operator != (const Point other) const
-{ 
+{
 	return !(*this == other);
 }
 
@@ -52,7 +52,7 @@ std::ostream& operator << (std::ostream& os, const Point& point)
 }
 
 std::istream& operator >> (std::istream& is, Point& point)
-{ 
+{
 	double x = 0;
 	double y = 0;
 	is >> x >> y;
