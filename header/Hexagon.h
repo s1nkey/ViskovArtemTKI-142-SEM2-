@@ -14,6 +14,11 @@ private:
 	Point A, B, C, D, E, F;
 
 	/**
+	 * @param countPoint - количество точек шестиугольника
+	 */
+	enum(countPoint = 6);
+
+	/**
 	 * @brief Допустимая погрешность при проверке шестиугольника
 	 */
 	static double eps;
