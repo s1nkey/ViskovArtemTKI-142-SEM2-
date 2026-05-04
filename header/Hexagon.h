@@ -56,6 +56,18 @@ public:
 	Hexagon(const Point& A, const Point& B, const Point& C, const Point& D, const Point& E, const Point& F);
 
 	/**
+	* @brief Конструктор копирования
+	* @param other - Шестиугольник, из которого копируются вершины
+	*/
+	Hexagon(const Hexagon& other);
+
+	/**
+	 * @brief Конструктор перемещения
+	 * @param other - Шестиугольник, из которого перемещаются вершины
+	 */
+	Hexagon(Hexagon&& other) noexcept;
+
+	/**
 	 * @brief Устанавливает допустимую погрешность
 	 * @param value - Значение погрешности
 	 */
