@@ -7,12 +7,12 @@ Vector::Vector(const Point& A, const Point& B)
     this->B = B;
 }
 
-double Vector::getLen()
+double Vector::getLen() const
 {
     return sqrt(pow(B.getX() - A.getX(), 2) + pow(B.getY() - A.getY(), 2));
 }
 
-double Vector::getAngle(Vector& other)
+double Vector::getAngle(const Vector& other) const
 {
     double x1 = B.getX() - A.getX();
     double y1 = B.getY() - A.getY();
