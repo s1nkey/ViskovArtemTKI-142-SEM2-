@@ -7,12 +7,19 @@
 void getEpsilon();
 
 /**
+* @param countPoint - количество точек шестиугольника
+*/
+enum C
+{
+	countPoint = 6
+};
+
+/**
  * @brief Точка входа в программу
  * @return 0 или 1, в зависимости от корректности выполнения
  */
 int main()
 {
-	setlocale(LC_ALL, "RU");
 	try
 	{
 		getEpsilon();
@@ -20,9 +27,9 @@ int main()
 
 		std::cout << "Введите 12 координат с указанной выше точностью:" << std::endl;
 
-		Point points[6];
-		std::string numbers[6] = { "первой", "второй", "третьей" , "четвёртой" , "пятой", "шестой" };
-		for (size_t i = 0; i < 6; i++)
+		Point points[countPoint];
+		std::string numbers[countPoint] = { "первой", "второй", "третьей" , "четвёртой" , "пятой", "шестой" };
+		for (size_t i = 0; i < countPoint; i++)
 		{
 			std::cout << " Введите координаты " << numbers[i] << " точки (x;y): ";
 			std::cin >> points[i];
