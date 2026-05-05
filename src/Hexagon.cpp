@@ -53,7 +53,7 @@ void Hexagon::thisHexagon() const
 
     for (size_t i = 0; i < countPoint; i++)
     {
-        if (std::fabs(angle[i] - acos(120.0)) > Hexagon::eps)
+        if (std::fabs(angle[i] - acos(0.5)) > Hexagon::eps)
         {
             error("Фигура не образует правильный шестиугольник: Угол не равен 120 градусам");
         }
