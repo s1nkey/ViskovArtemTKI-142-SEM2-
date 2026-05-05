@@ -45,8 +45,11 @@ void Point::operator = (const Point& other)
 
 void Point::operator=(Point&& other)
 {
-	this->x = other.x;
-	this->y = other.y;
+	this->x = std::move(other.x);
+	this->y = std::move(other.y);
+
+	other.x = 0;
+	other.y = 0;
 }
 
 bool Point::operator == (const Point& other) const
