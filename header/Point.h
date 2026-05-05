@@ -14,7 +14,7 @@ private:
 	 * @brief Выбрасывает исключение
 	 * @param text - Текст ошибки
 	 */
-	void error(std::string text);
+	void error(const std::string text);
 public:
 	/**
 	 * @brief Конструктор, создающий точку по заданными координатами
