@@ -14,7 +14,7 @@ private:
 	 * @brief Выбрасывает исключение
 	 * @param text - Текст ошибки
 	 */
-	void error(const std::string text);
+	void error(std::string text);
 public:
 	/**
 	 * @brief Конструктор, создающий точку по заданными координатами
@@ -52,6 +52,12 @@ public:
 	 * @param other - Точка, значения которой присваиваются текущей точке
 	 */
 	void operator = (const Point& other);
+
+	/**
+	* @brief Оператор перемещающего присваивания координат другой точки
+	* @param other - Точка, значения которой перемещаются в текущую точку
+	*/
+	void operator = (Point&& other);
 
 	/**
 	 * @brief Проверяет равенство двух точек
