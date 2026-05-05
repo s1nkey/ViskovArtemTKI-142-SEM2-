@@ -49,13 +49,13 @@ void Point::operator=(Point&& other)
 	this->y = other.y;
 }
 
-bool Point::operator == (const Point other) const
+bool Point::operator == (const Point& other) const
 {
 	return ((fabs(this->x - other.x) <= std::numeric_limits<double>::epsilon())
 		&& (fabs(this->y - other.y) <= std::numeric_limits<double>::epsilon()));
 }
 
-bool Point::operator != (const Point other) const
+bool Point::operator != (const Point& other) const
 {
 	return !(*this == other);
 }
