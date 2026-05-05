@@ -42,7 +42,7 @@ private:
 	 * @param value - Значение для округления
 	 * @return Округлённое значение
 	 */
-	double fixValue(const double value);
+	double fixValue(double value);
 public:
 	/**
 	 * @brief Конструктор, создающий правильный шестиугольник по шести точкам
