@@ -1,7 +1,7 @@
 #include "../header/Point.h"
 #include <math.h>
 
-void Point::error(std::string text)
+void Point::error(const std::string text)
 {
 	throw std::runtime_error(text);
 }
