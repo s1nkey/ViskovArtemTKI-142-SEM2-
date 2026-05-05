@@ -1,7 +1,7 @@
 #include "../header/Point.h"
 #include <math.h>
 
-void Point::error(const std::string text)
+void Point::error(std::string text)
 {
 	throw std::runtime_error(text);
 }
@@ -38,6 +38,12 @@ double Point::getY() const
 }
 
 void Point::operator = (const Point& other)
+{
+	this->x = other.x;
+	this->y = other.y;
+}
+
+void Point::operator=(Point&& other)
 {
 	this->x = other.x;
 	this->y = other.y;
