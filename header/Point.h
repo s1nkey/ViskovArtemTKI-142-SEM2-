@@ -64,14 +64,14 @@ public:
 	 * @param other - Точка для сравнения
 	 * @return true, если точки равны, иначе false
 	 */
-	bool operator == (const Point other) const;
+	bool operator == (const Point& other) const;
 
 	/**
 	 * @brief Проверяет неравенство двух точек
 	 * @param other - Точка для сравнения
 	 * @return true, если точки не равны, иначе false
 	 */
-	bool operator != (const Point other) const;
+	bool operator != (const Point& other) const;
 
 	/**
 	 * @brief Выводит координаты точки в поток
